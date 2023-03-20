@@ -1,0 +1,17 @@
+.countdown .card {
+  background: #333333;
+  border-radius: 2ch;
+  display: inline-block;
+  margin: 10px;
+  min-width: 100px;
+  padding: 20px 0;
+  filter: drop-shadow(0 0 2em #ffffff8c);
+}
+
+.countdown .card .countdown-value {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.countdown .card .countdown-unit {
+  text-transform: capitalize;
+}
