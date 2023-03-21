@@ -25,7 +25,7 @@ function App() {
         overflow: 'auto'
       }}
     >
-      <div>
+      <div >
         <h1>Countdown to Japan !</h1>
         <a
           href="https://www.notion.so/Japon-49bf0eca44294eebb040435c98126db2"

@@ -1,11 +1,25 @@
 .countdown .card {
   background: #333333;
-  border-radius: 2ch;
+  border-radius: 1ch;
   display: inline-block;
   margin: 10px;
   min-width: 100px;
   padding: 20px 0;
+  filter: drop-shadow(0 0 1em #ffffff8c);
+}
+
+.time-is-up {
+  background: #333333;
+  border-radius: 2ch;
+  display: inline-block;
+  margin: 10px;
+  min-width: 100px;
+  padding: 10px 10px;
   filter: drop-shadow(0 0 2em #ffffff8c);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .countdown .card .countdown-value {
@@ -14,4 +28,18 @@
 }
 .countdown .card .countdown-unit {
   text-transform: capitalize;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container h1 {
+color:  #ffffff8c ;
+font-size: 2.1rem;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+margin-bottom: 1.5rem;
+
 }
