@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./countdown.css";
+import NotionLogo from "./assets/Notion-logo.png";
 
-const Countdown = ({ date, endDate }) => {
-  const endDateObj = new Date(Date.parse(endDate));
+const Countdown = ({ date, endDate, tripTitle, notionLink }) => {
+  // const endDateObj = new Date(Date.parse(endDate));
 
   const calculateTimeLeft = () => {
     const difference = +new Date(date) - +new Date();
@@ -41,11 +42,17 @@ const Countdown = ({ date, endDate }) => {
   return (
     <div>
       {isTimeUp ? (
-        <div className="time-is-up" >Temps écoulé !</div>
+        <div className="time-is-up">Temps écoulé !</div>
       ) : (
         <>
-          <div className="container"> 
-          <h1>Tokyo Countdown</h1>
+          <div className="container">
+            <div className="trip-title">
+              <h2>{tripTitle}</h2>
+              <a href={notionLink} target="_blank">
+                <img src={NotionLogo} className="logo" alt="Notion Logo" />
+              </a>
+            </div>
+            {/* COUNTDOWN CARDS */}
             <div className="countdown">
               <div className="card">
                 <div className="countdown-value">{days}</div>
@@ -68,9 +75,7 @@ const Countdown = ({ date, endDate }) => {
             </div>
             {/* <p>Counting down to jap on {moment.unix(unixEndDate).format('dddd, MMMM Do, YYYY | h:mm A')}</p> */}
             {/* <div>Fin le {endDateObj.toLocaleString()}</div> */}
-            
           </div>
-          
         </>
       )}
     </div>

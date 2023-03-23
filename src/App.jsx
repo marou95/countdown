@@ -11,7 +11,16 @@ import Countdown from "./countdown.jsx";
 import BackgroundSlider from "react-background-slider";
 
 function App() {
-  const endDate = "2023-08-18";
+  const endDate1 = "2023-08-18";
+  const endDate2 = "2023-08-07";
+
+  const trip1 = "Marwen & Thibault"
+  const trip2 = "Vivian & Yanic"
+
+  const notionMT = "https://www.notion.so/Japon-49bf0eca44294eebb040435c98126db2"
+  const notionVY = ""
+
+
 
   return (
     <div
@@ -26,17 +35,12 @@ function App() {
       }}
     >
       <div >
-        <h1>Countdown to Japan !</h1>
-        <a
-          href="https://www.notion.so/Japon-49bf0eca44294eebb040435c98126db2"
-          target="_blank"
-        >
-          <img src={NotionLogo} className="logo" alt="Notion Logo" />
-        </a>
+        <h1 className="h1-title">Japan Countdown</h1>
       </div>
-      <p className="read-the-docs">Click on the Notion logo</p>
+      {/* <p className="read-the-docs">Click on the Notion logo</p> */}
       <div>
-        <Countdown date={endDate}  />
+        <Countdown date={endDate1} tripTitle={trip1} notionLink={notionMT}  />
+        <Countdown date={endDate2} tripTitle={trip2} notionLink={notionVY}  />
       </div>
     </div>
   );
